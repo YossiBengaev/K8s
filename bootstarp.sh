@@ -3,7 +3,7 @@
 # This is for all the Nodes in the cluster
 
  # Get updates
-sudo apt update && sudo apt upgrade -y
+sudo apt update -y
 
 # Disable swap
 sudo swapoff -a
