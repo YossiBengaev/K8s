@@ -30,3 +30,7 @@ sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl
 # Hold the versions because we do not want to accidentally update your Kubernetes cluster
 sudo apt-mark hold kubelet kubeadm kubectl
+
+# Build the K8s Cluster:
+sudo kubeadm init
+
