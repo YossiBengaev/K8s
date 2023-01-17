@@ -7,10 +7,20 @@ sudo apt update && sudo apt upgrade
 
 # Disable swap
 sudo swapoff -a
+# Need to think how to do this
+# sudo vi /etc/fstab -> then put the last line in comment
 
 # From: https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/ 
 # Install Curl
 sudo apt-get install -y apt-transport-https ca-certificates curl
+
+# Install Docker
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+
+# Use docker as a non-root user
+sudo usermod -aG docker $USER
+
 # Download the Google Cloud public signing key:
 sudo curl -fsSLo /etc/apt/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
 # Add the Kubernetes apt repository:
@@ -20,13 +30,3 @@ sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl
 # Hold the versions because we do not want to accidentally update your Kubernetes cluster
 sudo apt-mark hold kubelet kubeadm kubectl
-
-# Install Docker
-curl -fsSL https://get.docker.com -o get-docker.sh
-sudo sh get-docker.sh
-
-# Use docker as a non-root user
-sudo usermod -aG docker $USER
-
-
-
