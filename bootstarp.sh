@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 # This is for all the Nodes in the cluster
 
