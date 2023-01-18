@@ -11,6 +11,9 @@ echo "Disable swap"
 sudo swapoff -a
 sed -i '/swap/d' /etc/fstab
 
+# Install curl
+sudo apt install curl -y
+
 # Install Docker
 echo "Install docker"
 apt-get install apt-transport-https ca-certificates curl software-properties-common -y
