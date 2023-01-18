@@ -37,12 +37,6 @@ sudo apt-get install -y kubelet kubeadm kubectl
 # Hold the versions because we do not want to accidentally update your Kubernetes cluster
 sudo apt-mark hold kubelet kubeadm kubectl
 
-# Install Git
-sudo apt-get install git-all -y
-
-# Clone the Project
-git clone https://github.com/YossiBengaev/K8s-With-Vagrant.git
-
 #if [[ $USER = "kmaster" ]] 
 #then    chmod 777 master.sh && bash master.sh
 #elif [[ $USER = "kworker*" ]]
