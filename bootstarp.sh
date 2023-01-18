@@ -43,8 +43,8 @@ sudo apt-get install git-all -y
 # Clone the Project
 git clone https://github.com/YossiBengaev/K8s-With-Vagrant.git
 
-if [[ $USER = "kmaster" ]] 
-then    chmod 777 master.sh && bash master.sh
-elif [[ $USER = "kworker*" ]]
-then    chmod 777 worker.sh && bash worker.sh
-fi
+#if [[ $USER = "kmaster" ]] 
+#then    chmod 777 master.sh && bash master.sh
+#elif [[ $USER = "kworker*" ]]
+#then    chmod 777 worker.sh && bash worker.sh
+#fi
