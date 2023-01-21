@@ -15,6 +15,10 @@ sed -i '/swap/d' /etc/fstab
 echo "Install curl"
 sudo apt install curl -y
 
+# Install curl
+echo "Install net-tools"
+sudo apt install net-tools -y
+
 # Install Docker
 echo "Install docker..."
 sudo apt-get install ca-certificates -y curl -y gnupg -y lsb-release -y
