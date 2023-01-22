@@ -19,8 +19,9 @@ pipeline {
             steps {
                 echo '# # # # # STAGE 1 -> Starting Build stage... # # # # #'
                 script {
-                    dir('App')
-                    dockerImage = docker.build("$DockerHubRegistry:latest")
+                    dir('App'){
+                        dockerImage = docker.build("$DockerHubRegistry:latest")
+                    }
                 }
             }
         }
