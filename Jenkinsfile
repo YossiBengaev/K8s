@@ -6,7 +6,7 @@ pipeline {
         DockerImage = 'yossibenga/web-app'
         DockerHubRegistryCredential  = 'DockerHubCred'
         
-        JenkinsDir = '/var/lib/jenkins/workspace/K8s'
+        JenkinsDir = '/var/lib/jenkins/workspace/K8'
         
         MasterIp = '192.168.56.104'
         MasterDir = '/home/master'
