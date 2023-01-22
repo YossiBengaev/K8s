@@ -12,7 +12,7 @@ copy_to_remote_machine() {
 
 run_helm_yossi_ingress(){
     echo "starting deploy ingress.. "
-    ssh -o StrictHostKeyChecking=no master@${IP_MACHINE} 'helm install Helm-yossi-ingress yossi-ingress'
+    ssh -o StrictHostKeyChecking=no master@${IP_MACHINE} 'helm install yossi-ingress Helm-yossi-ingress'
 }
 
 docker_run
