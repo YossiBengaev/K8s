@@ -18,7 +18,7 @@ copy_to_remote_machine() {
 
 run_helm_yossi_ingress(){
     echo "starting deploy ingress.. "
-    ssh -o StrictHostKeyChecking=no "master@master" "helm uninstall $IngressName && helm install $IngressName $IngressFolder"
+    ssh -o StrictHostKeyChecking=no "master@master" "helm uninstall $IngressName ;; helm install $IngressName $IngressFolder"
 }
 
 docker_run
