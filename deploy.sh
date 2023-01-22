@@ -1,13 +1,13 @@
 #!/bin/bash
 
 docker_run(){
-    echo "running docker run to my web-app... "
-    ssh -o StrictHostKeyChecking=no "master@master" 'docker run -d --name web-app $DockerHubRegistry:latest'
+    echo "running docker... "
+    ssh -o StrictHostKeyChecking=no "master@master" 'docker run -d web-app $DockerHubRegistry:latest'
 }
 
 copy_to_remote_machine() {
     echo "starting copy Helm Dir to Master...."
-    scp -o StrictHostKeyChecking=no "Helm-yossi-ingress" "master@master":"/home/master" 
+    scp -r "Helm-yossi-ingress" "master@master":"/home/master" 
 }
 
 run_helm_yossi_ingress(){
