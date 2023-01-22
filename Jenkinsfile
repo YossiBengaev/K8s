@@ -4,6 +4,7 @@ pipeline {
         DockerHubRegistry = 'yossibenga/web-app'
         DockerHubUrl = 'https://hub.docker.com/repository/docker/yossibenga/web-app'
         DockerImage = 'yossibenga/web-app'
+        DockerHubRegistryCredential  = 'DockerHubCred'
         
         JenkinsDir = '/var/lib/jenkins/workspace/K8s'
         
@@ -29,7 +30,7 @@ pipeline {
             steps {
                 echo '# # # # # STAGE 2 -> Starting Push To DockerHub stage... # # # # #'
                 script {
-                    withDockerRegistry(credentialsId: 'DockerHubCred', url: '$DockerHubUrl') {
+                    withDockerRegistry([ credentialsId: "$DockerHubRegistryCredential", url: "" ]) {
                     dockerImage.push()
                     sh 'docker rmi $DockerHubRegistry:latest'
                     }
