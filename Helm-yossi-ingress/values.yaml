@@ -1,4 +1,5 @@
 deploymentName: web-deployment
+deploymentNameSpace: mission
 appName: web-app
 replicas: 2
 containerName: web-app
