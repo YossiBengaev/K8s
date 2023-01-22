@@ -5,6 +5,7 @@ replicas: 2
 containerName: web-app
 image: docker.io/yossibenga/web-app:latest
 serviceName: my-web-app-service
+serviceNameSpace: mission
 servicePort: 80
 targetPort: 5000
 serviceType: LoadBalancer
