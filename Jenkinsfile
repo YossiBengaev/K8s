@@ -7,7 +7,8 @@ pipeline {
         DockerHubRegistryCredential  = 'DockerHubCred'
         
         JenkinsDir = '/var/lib/jenkins/workspace/k8'
-        
+        JenkinsWorkSpace = '/var/lib/jenkins/workspace'
+
         MasterIp = '192.168.56.104'
         MasterDir = '/home/master'
         
@@ -41,6 +42,7 @@ pipeline {
             steps {
                 echo '# # # # # STAGE 3 -> Starting Deploy ... # # # # #'
                 script {
+                        sh 'cp $JenkinsWorkSpace/known_hosts $JenkinsDir'
                         sh 'chmod u+x $JenkinsDir/deploy.sh'
                         sh './deploy.sh'
                 }
