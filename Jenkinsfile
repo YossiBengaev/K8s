@@ -41,10 +41,8 @@ pipeline {
             steps {
                 echo '# # # # # STAGE 3 -> Starting Deploy ... # # # # #'
                 script {
-                    sshagent(['MasterSshCred']) {
                         sh 'chmod u+x $JenkinsDir/deploy.sh'
                         sh './deploy.sh'
-                    }
                 }
             }
         }
