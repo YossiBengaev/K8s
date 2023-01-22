@@ -42,7 +42,7 @@ pipeline {
                 echo '# # # # # STAGE 3 -> Starting Deploy ... # # # # #'
                 script {
                     sshagent(['MasterSshCred']) {
-                        sh 'docker run --name web-app $DockerHubRegistry:latest'
+                        sh 'docker run -d --name web-app $DockerHubRegistry:latest'
                         sh 'pwd'
                     }
                 }
