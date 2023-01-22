@@ -30,10 +30,10 @@ pipeline {
             steps {
                 echo '# # # # # STAGE 2 -> Starting Push To DockerHub stage... # # # # #'
                 script {
-                    withDockerRegistry([ credentialsId: "$DockerHubRegistryCredential", url: "" ]) {
-                    dockerImage.push()
+                    //withDockerRegistry([ credentialsId: "$DockerHubRegistryCredential", url: "" ]) {
+                    //dockerImage.push()
                     //sh 'docker rmi $DockerHubRegistry:latest'
-                    }
+                    //}
                 }
             }
         }
