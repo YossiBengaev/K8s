@@ -2,7 +2,7 @@
 
 docker_run(){
     echo "running docker... "
-    ssh -o StrictHostKeyChecking=no "master@master" 'docker run -d web-app $DockerHubRegistry:latest'
+    ssh -o StrictHostKeyChecking=no "master@master" 'docker run -d yossibenga/web-app:latest'
 }
 
 copy_to_remote_machine() {
