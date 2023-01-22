@@ -32,7 +32,7 @@ pipeline {
                 script {
                     withDockerRegistry([ credentialsId: "$DockerHubRegistryCredential", url: "" ]) {
                     dockerImage.push()
-                    sh 'docker rmi $DockerHubRegistry:latest'
+                    //sh 'docker rmi $DockerHubRegistry:latest'
                     }
                 }
             }
