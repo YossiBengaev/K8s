@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This is for all the Nodes in the cluster
+# This is for all the nodes in the cluster
 
  # Get updates
  echo "Geting updates...."
