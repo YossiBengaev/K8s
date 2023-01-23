@@ -18,17 +18,21 @@ Deploy.sh:
                              Second install and create helm and namespace "mission".
 
 Check for deployment of namespace and ruuning pods:
+
 master@master:~$ kubectl get all -n mission
 NAME                                READY   STATUS    RESTARTS   AGE
 pod/web-deployment-bfcfdfdd-prflv   1/1     Running   0          125m
 pod/web-deployment-bfcfdfdd-s9h2q   1/1     Running   0          125m
 
+
 NAME                         TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
 service/my-web-app-service   LoadBalancer   10.99.29.231   <pending>     80:30010/TCP   125m
 
+  
 NAME                             READY   UP-TO-DATE   AVAILABLE   AGE
 deployment.apps/web-deployment   2/2     2            2           125m
 
+  
 NAME                                      DESIRED   CURRENT   READY   AGE
 replicaset.apps/web-deployment-bfcfdfdd   2         2         2       125m
 
