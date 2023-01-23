@@ -8,12 +8,12 @@ IngressName='yossi-ingress'
 
 docker_run() {
     echo "running docker... "
-    ssh -o StrictHostKeyChecking=no "master@master" "docker run -d $RepoDockerHub"
+    ssh -o StrictHostKeyChecking=no "master@192.168.56.104" "docker run -d $RepoDockerHub"
 }
 
 copy_to_remote_machine() {
     echo "starting copy Helm Dir to Master..."
-    scp -r "$IngressFolder" "master@master":"$MasterDir" 
+    scp -r "$IngressFolder" "master@192.168.56.104":"$MasterDir" 
 }
 
 run_helm_yossi_ingress() {
