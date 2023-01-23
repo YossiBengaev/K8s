@@ -7,7 +7,7 @@ IngressFolder='Helm-yossi-ingress'
 IngressName='yossi-ingress'
 
 docker_run() {
-    echo "running docker... "
+    echo "starting run docker... "
     ssh -o StrictHostKeyChecking=no "master@master" "docker run -d $RepoDockerHub"
 }
 
@@ -22,6 +22,8 @@ run_helm_yossi_ingress() {
      kubectl delete namespace mission ; kubectl create namespace mission ;
      helm install $IngressName $IngressFolder"
 }
+
+echo "starting deploy my web-app container and then deployment and ingress of K8s on Master node"
 
 docker_run
 copy_to_remote_machine 
