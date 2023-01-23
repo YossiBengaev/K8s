@@ -42,9 +42,11 @@ pipeline {
             steps {
                 echo '# # # # # STAGE 3 -> Starting Deploy ... # # # # #'
                 script {
-                        sh 'cp $JenkinsWorkSpace/known_hosts $JenkinsDir'
-                        sh 'chmod u+x $JenkinsDir/deploy.sh'
-                        sh './deploy.sh'
+                        sshagent(['MasterSshCred']) {
+                            sh 'cp $JenkinsWorkSpace/known_hosts $JenkinsDir'
+                            sh 'chmod u+x $JenkinsDir/deploy.sh'
+                            sh './deploy.sh'
+                        }
                 }
             }
         }
