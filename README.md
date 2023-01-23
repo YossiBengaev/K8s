@@ -14,8 +14,8 @@ Deploy.sh:
  include 3 functions
   1. docker_run- Make ssh connection to Master node and run the web-app container.
   2. copy_to_remote_machine- Make scp connection to Master node and send the Helm-yossi-ingress folder.
-  3. run_helm_yossi_ingress- First uninstall and delete older helm and namespace that I gonna use.
-                             Second install and create helm and namespace "mission".
+  3. run_helm- First uninstall and delete older helm and namespace that I gonna use.
+               Second install and create helm and namespace "mission".
 
 Check for deployment of namespace and ruuning pods:
 
