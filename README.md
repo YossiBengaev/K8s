@@ -20,9 +20,9 @@ Deploy.sh:
 Check for deployment of namespace and ruuning pods:
 
 master@master:~$ kubectl get all -n mission
-NAME                                READY   STATUS    RESTARTS   AGE
-pod/web-deployment-bfcfdfdd-prflv   1/1     Running   0          125m
-pod/web-deployment-bfcfdfdd-s9h2q   1/1     Running   0          125m
+NAME	                              READY	    STATUS	RESTARTS	  AGE
+pod/web-deployment-bfcfdfdd-prflv	  1/1	      Running	    0	      125m
+pod/web-deployment-bfcfdfdd-s9h2q	  1/1	      Running	    0	      125m
 
 
 NAME                         TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
