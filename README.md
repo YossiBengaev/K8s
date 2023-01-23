@@ -7,7 +7,7 @@ The Cluster contain 2 Nodes
 Jenkins Pipeline:
  include 3 stages
   1. Build-   Build with docker the image of my web application.
-  2. Push-    Push the built image to my Docker Hub Repository.
+  2. Push-    Push the built image to my DockerHub Repository (yossibenga/web-app:latest).
   3. Deploy-  Run the deploy.sh script.
   
 Deploy.sh:
