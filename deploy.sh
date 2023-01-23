@@ -12,7 +12,7 @@ docker_run() {
 }
 
 copy_to_remote_machine() {
-    echo "starting copy Helm Dir to Master..."
+    echo "starting copy Helm Dir to Master...."
     scp -r "$IngressFolder" "master@master":"$MasterDir" 
 }
 
