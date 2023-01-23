@@ -45,7 +45,7 @@ pipeline {
                         sshagent(['MasterSshCred']) {
                             sh 'cp $JenkinsWorkSpace/known_hosts $JenkinsDir'
                             sh 'chmod u+x $JenkinsDir/deploy.sh'
-                            sh './deploy.sh'
+                            sh 'bash deploy.sh'
                         }
                 }
             }
