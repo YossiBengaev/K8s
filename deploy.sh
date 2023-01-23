@@ -7,7 +7,7 @@ IngressFolder='Helm-yossi-ingress'
 IngressName='yossi-ingress'
 
 docker_run() {
-    echo "starting run docker...."
+    echo "starting run docker..."
     ssh -o StrictHostKeyChecking=no "master@master" "docker run -d $RepoDockerHub"
 }
 
