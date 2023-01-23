@@ -8,12 +8,6 @@ pipeline {
         
         JenkinsDir = '/var/lib/jenkins/workspace/k8'
         JenkinsWorkSpace = '/var/lib/jenkins/workspace'
-
-        MasterIp = '192.168.56.104'
-        MasterDir = '/home/master'
-        
-        Worker1Ip ='192.168.56.105'
-        Worker1Dir = '/home/master'
     }
 
     stages {
